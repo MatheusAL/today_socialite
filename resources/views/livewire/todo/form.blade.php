@@ -1,9 +1,12 @@
 <x-jet-form-section submit="createTask">
     <x-slot name="title">
-        {{ __('Create a new task') }}
+        <h1 class="w-full font-bold text-xl">
+            {{ __('Create a new task') }}
+        </h1>
     </x-slot>
 
     <x-slot name="description">
+        <div class="text-sm"></div>
         {{ __('Create a new item in your task list.') }}
     </x-slot>
 

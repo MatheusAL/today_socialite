@@ -19,8 +19,8 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
             <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Team') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="text" name="id"/>
+                <x-jet-label for="Team" value="{{ __('Team') }}" />
+                <x-jet-input id="Team" class="block mt-1 w-full" type="text" name="team"/>
             </div>
 
             <div class="mt-4">

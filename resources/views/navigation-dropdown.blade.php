@@ -130,7 +130,7 @@
 
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard-tasks') }}" :active="request()->routeIs('dashboard-tasks')">
-                {{ __('todo') }}
+                {{ __('Tasks') }}
             </x-jet-responsive-nav-link>
         </div>
 

@@ -18,16 +18,16 @@
                 <td class="border px-4 py-2">@if($item->done)Done @else To Do @endif</td> 
                 <td class="border px-4 py-2">
                     @if($item->done)
-                        <button wire:click="markAsToDo({{ $item->id }})" class="bg-red-100 text-red-600 px-6 rounded-full">
+                        <button wire:click="markAsToDo({{ $item->id }})" class="bg-red-100 w-50 text-red-600 px-6 py-3 rounded-full">
                             Mark as "To Do"
                         </button>
                     @else
-                        <button wire:click="markAsDone({{ $item->id }})" class="bg-gray-800 text-white px-6 rounded-full">
+                        <button wire:click="markAsDone({{ $item->id }})" class="bg-green-500 w-50 text-white px-6 py-3 rounded-full">
                             Mark as "Done"
                         </button>
                     @endif
 
-                    <button wire:click="deleteTask({{ $item->id }})" class="bg-red-100 text-red-600 px-6 rounded-full">
+                    <button wire:click="deleteTask({{ $item->id }})" class="bg-red-500 w-50 text-white px-6 py-3 rounded-full">
                         Delete Permanently
                     </button>
                 </td>             
