@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard-tasks', function () {
     return view('tasks');
 })->name('dashboard-tasks');
+
+Route::get('social-auth/{provider}', [SocialController::class,'redirectToProvider'])
+    ->name('social.auth');
+
+Route::get('social-auth/{provider}/callback', [SocialController::class,'handleProviderCallback'])
+    ->name('social-auth.callback');

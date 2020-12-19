@@ -45,7 +45,7 @@
             </div>
             <div class="flex-auto flex pt-5 space-x-3">
                 <x-jet-button class="ml-4 bg-greay-900 text-white">
-                {{ __('Login with Github') }}
+                    <a href="{{ route('social.auth', ['provider' => 'github']) }}">{{ __('Login with Github') }}</a>
                 </x-jet-button>
                 <x-jet-button class="ml-4 bg-red-600 text-white">
                 {{ __('Login with Google') }}
