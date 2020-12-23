@@ -44,11 +44,11 @@
                 </x-jet-button>
             </div>
             <div class="flex-auto flex pt-5 space-x-3">
-                <x-jet-button class="ml-4 bg-greay-900 text-white">
+                <x-jet-button class="ml-4 bg-gray-900 text-white">
                     <a href="{{ route('social.auth', ['provider' => 'github']) }}">{{ __('Login with Github') }}</a>
                 </x-jet-button>
                 <x-jet-button class="ml-4 bg-red-600 text-white">
-                {{ __('Login with Google') }}
+                    <a href="{{ route('social.auth', ['provider' => 'google']) }}">{{ __('Login with Google') }}</a>
                 </x-jet-button>
             </div>
         </form>

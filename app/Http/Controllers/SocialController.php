@@ -30,7 +30,7 @@ class SocialController extends Controller{
             'password' => encrypt('')
         ]);
         
-        $newTeam = Team::forceCreate([
+        $newTeam = Team::firstOrCreate(['user_id' => $user->id],[
             'user_id' => $user->id,
             'name' => explode(' ', $user->name, 2)[0]."'s Team",
             'personal_team' => true,

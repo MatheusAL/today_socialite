@@ -34,5 +34,10 @@ return [
         'client_secret' => env('GH_SECRET'),
         'redirect' => env('APP_URL') . '/social-auth/github/callback',
     ],
+    'google' => [
+        'client_id' => env('GOOGLE_ID'),
+        'client_secret' => env('GOOGLE_SECRET'),
+        'redirect' => env('APP_URL') . '/social-auth/google/callback',
+    ],
 
 ];

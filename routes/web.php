@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SocialController;
+use App\Http\Livewire\Task_Detail;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard-tasks', function () {
     return view('tasks');
 })->name('dashboard-tasks');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/{task}', [Task_Detail::class,'render'])->name('task-detail');
 
 Route::get('social-auth/{provider}', [SocialController::class,'redirectToProvider'])
     ->name('social.auth');
